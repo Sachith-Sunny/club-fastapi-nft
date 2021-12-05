@@ -1,0 +1,53 @@
+Metadata-Version: 1.1
+Name: jos
+Version: 0.1.2
+Summary: Jingdong API Client
+Home-page: https://github.com/verycb/jos
+Author: VeryCB
+Author-email: imcaibin@gmail.com
+License: MIT
+Description: JOS Python SDK
+        ==============
+        
+        JOS is an unofficial Jingdong open service Python SDK
+        
+        
+        Installation
+        ------------
+        
+        You can install jos with pip::
+        
+            $ pip install jos
+        
+        Or, with setuptools easy_install in case you didn't have pip::
+        
+            $ easy_install jos
+        
+        
+        Usage
+        -----
+        ::
+        
+            from jos.client import JDClient
+        
+            client = JDClient(key='your_api_key', secret='your_api_secret')
+        
+            method = 'jingdong.ware.product.detail.search.list.get'
+            params = {
+                'skuId': '123456',
+                'isLoadWareScore': False,
+                'client': 'm',
+            }
+        
+            res = client.call(method, params)
+        
+Keywords: jingdong,jos
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
